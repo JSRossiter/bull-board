@@ -16,6 +16,7 @@ async function getStats(queue) {
     queue.client.serverInfo.total_system_memory ||
     queue.client.serverInfo.maxmemory
 
+  await queue.client.quit()
   return validMetrics
 }
 
